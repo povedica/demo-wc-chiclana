@@ -1,0 +1,75 @@
+{
+  "wpcli_binary": "wp",
+  "instances": [
+    {
+      "path": "/sites/wptest.dev",
+      "arguments": {
+        "core": {
+          "download": {
+            "--version": "latest",
+            "--locale": "es_ES"
+          },
+          "config": {
+            "--dbname": "wptest",
+            "--dbuser": "demo",
+            "--dbpass": "demo",
+            "--dbhost": "127.0.0.1",
+            "--dbprefix": "wptest_",
+            "--dbcharset": "utf8",
+            "--dbcollate": "utf8_general_ci",
+            "--locale": "es_ES"
+          }
+        },
+        "db": {
+          "create": ""
+        },
+        "install_core": {
+          "install": {
+            "--url": "wptest.dev",
+            "--title": "\"WP Test\"",
+            "--admin_user": "demo",
+            "--admin_password": "demo",
+            "--admin_email": "yoyyosemite@gmail.com"
+          }
+        },
+        "plugin": {
+          "install": [
+            {
+              "name": "debug-bar",
+              "activate": "true"
+            }
+          ]
+        },
+        "theme": {
+          "activate": "twentyseventeen"
+        },
+        "post": {
+          "create": [
+            {
+              "post_type": "page",
+              "post_title": "Inicio",
+              "post_status": "publish"
+            },
+            {
+              "post_type": "page",
+              "post_title": "Página 1 - Demo 1",
+              "post_status": "publish"
+            }
+          ],
+          "generate":[
+            {
+              "count":10
+            }
+          ]
+        },
+        "menu": {
+          "create": "menu-principal",
+          "location": "assign menu-principal primary"
+        },
+        "rewrite": {
+          "structure": "/%postname%/"
+        }
+      }
+    }
+  ]
+}

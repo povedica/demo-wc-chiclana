@@ -1,0 +1,246 @@
+{
+  "wpcli_binary": "wp",
+  "instances": [
+    {
+      "path": "/sites/wpchiclana.demo/webs/wpchiclana1.demo",
+      "arguments": {
+        "core": {
+          "download": {
+            "--version": "latest",
+            "--locale": "es_ES"
+          },
+          "config": {
+            "--dbname": "wc_chiclana_demo1",
+            "--dbuser": "demo",
+            "--dbpass": "demo",
+            "--dbhost": "127.0.0.1",
+            "--dbprefix": "wcdemo1_",
+            "--dbcharset": "utf8",
+            "--dbcollate": "utf8_general_ci",
+            "--locale": "es_ES"
+          }
+        },
+        "db": {
+          "create": ""
+        },
+        "install_core": {
+          "install": {
+            "--url": "wpchiclana1.demo",
+            "--title": "\"WP Chiclana Demo 1\"",
+            "--admin_user": "demo",
+            "--admin_password": "demo",
+            "--admin_email": "yoyyosemite@gmail.com"
+          }
+        },
+        "plugin": {
+          "install": [
+            {
+              "name": "adminimize",
+              "activate": "true"
+            },
+            {
+              "name": "advanced-custom-fields",
+              "activate": "true"
+            },
+            {
+              "name": "contact-form-7",
+              "activate": "true"
+            },
+            {
+              "name": "contact-form-7-to-database-extension",
+              "activate": "true"
+            },
+            {
+              "name": "debug-bar",
+              "activate": "true"
+            },
+            {
+              "name": "duplicator",
+              "activate": "true"
+            },
+            {
+              "name": "query-monitor",
+              "activate": "true"
+            },
+            {
+              "name": "wp-sweep",
+              "activate": "true"
+            },
+            {
+              "name": "regenerate-thumbnails",
+              "activate": "true"
+            },
+            {
+              "name": "/sites/wpchiclana.demo/extra-plugins/revslider.zip",
+              "activate": "true"
+            },
+            {
+              "name": "/sites/wpchiclana.demo/extra-plugins/custom-wpcli-commands.zip",
+              "activate": "true"
+            },
+            {
+              "name": "sucuri-scanner",
+              "activate": "true"
+            },
+            {
+              "name": "user-role-editor",
+              "activate": "true"
+            },
+            {
+              "name": "w3-total-cache",
+              "version": "0.9.5.1",
+              "activate": "true"
+            },
+            {
+              "name": "wp-better-emails",
+              "activate": "true"
+            }
+          ]
+        },
+        "theme": {
+          "activate": "twentyfifteen"
+        },
+        "post": {
+          "create": [
+            {
+              "post_type": "page",
+              "post_title": "Inicio"
+            },
+            {
+              "post_type": "page",
+              "post_title": "Página 1 - Demo 1"
+            }
+          ]
+        },
+        "menu": {
+          "create": "menu-principal",
+          "location": "assign menu-principal primary"
+        },
+        "rewrite": {
+          "structure": "/%postname%"
+        }
+      }
+    },
+    {
+      "path": "/sites/wpchiclana.demo/webs/wpchiclana2.demo",
+      "arguments": {
+        "core": {
+          "download": {
+            "--version": "latest",
+            "--locale": "es_ES"
+          },
+          "config": {
+            "--dbname": "wc_chiclana_demo2",
+            "--dbuser": "demo",
+            "--dbpass": "demo",
+            "--dbhost": "localhost",
+            "--dbprefix": "wpdemo2_",
+            "--dbcharset": "utf8",
+            "--dbcollate": "utf8_general_ci",
+            "--locale": "es_ES"
+          }
+        },
+        "db": {
+          "create": ""
+        },
+        "install_core": {
+          "install": {
+            "--url": "wpchiclana2.demo",
+            "--title": "\"WP Chiclana Demo 2\"",
+            "--admin_user": "demo",
+            "--admin_password": "demo",
+            "--admin_email": "yoyyosemite@gmail.com"
+          }
+        },
+        "plugin": {
+          "install": [
+            {
+              "name": "adminimize",
+              "activate": "true"
+            },
+            {
+              "name": "advanced-custom-fields",
+              "activate": "true"
+            },
+            {
+              "name": "contact-form-7",
+              "version": "4.2.1",
+              "activate": "true"
+            },
+            {
+              "name": "contact-form-7-to-database-extension",
+              "activate": "true"
+            },
+            {
+              "name": "debug-bar",
+              "activate": "true"
+            },
+            {
+              "name": "duplicator",
+              "activate": "true"
+            },
+            {
+              "name": "query-monitor",
+              "activate": "true"
+            },
+            {
+              "name": "wp-sweep",
+              "activate": "true"
+            },
+            {
+              "name": "regenerate-thumbnails",
+              "activate": "true"
+            },
+            {
+              "name": "/sites/wpchiclana.demo/extra-plugins/revslider.zip",
+              "activate": "true"
+            },
+            {
+              "name": "/sites/wpchiclana.demo/extra-plugins/custom-wpcli-commands.zip",
+              "activate": "true"
+            },
+            {
+              "name": "sucuri-scanner",
+              "activate": "true"
+            },
+            {
+              "name": "user-role-editor",
+              "activate": "true"
+            },
+            {
+              "name": "w3-total-cache",
+              "version": "0.9.5.1",
+              "activate": "true"
+            },
+            {
+              "name": "wp-better-emails",
+              "activate": "true"
+            }
+          ]
+        },
+        "theme": {
+          "activate": "twentyfifteen"
+        },
+        "post": {
+          "create": [
+            {
+              "post_type": "page",
+              "post_title": "Inicio"
+            },
+            {
+              "post_type": "page",
+              "post_title": "Página 1 - Demo 2"
+            }
+          ]
+        },
+        "menu": {
+          "create": "menu-principal",
+          "location": "assign menu-principal primary"
+        },
+        "rewrite": {
+          "structure": "/%postname%"
+        }
+      }
+    }
+  ]
+}
